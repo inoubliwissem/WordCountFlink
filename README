@@ -1,0 +1,54 @@
+
+program: WordCoun with Flink Framework
+
+
+Prerequisites:
+=========================================
+java JDK +7
+flink-0.9.1 Framework
+maven +2
+=========================================
+create our project with maven tool
+=========================================
+create project maven:
+mvn archetype:generate
+ -DgroupId=com.flink.app
+ -DartifactId=flink
+ -DarchetypeArtifactId=maven-archetype-quickstart
+ -DinteractiveMode=false
+build our project :
+  cd flink
+  mvn package
+============================================
+Steps to launch Flink Framwork
+============================================
+1: entre to direcory when to palce your engine flink
+ cd flink-0.9.1
+2 : run a flink 
+   ./bin/start-local.sh
+3 : display the jobs started
+   jps
+4: get link to desplay dashbord of flik 
+localhost:8081
+
+============================================
+Steps to run this project
+============================================
+example to input and output file:
+        input hdfs://localhost:8020/user/hdfs/test
+        output hdfs://localhost:8020/user/hdfs/rst
+bin/flink run -c [mainClass] [jar File]
+
+====Example==================================
+
+bin/flink run -c com.flink.App /home/../flink/target/flink-bach-1.0-SNAPSHOT.jar
+==============================================
+othors commande line
+==============================================
+run #runs a program
+info #displays information about a program.
+list #lists running and finished programs. -r & -s
+cancel #cancels a running program -i
+
+
+  

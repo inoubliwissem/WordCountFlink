@@ -1,0 +1,3 @@
+Creates a data set from the Java 
+Java.util.Collection. All
+ elements in the collection must be of 
